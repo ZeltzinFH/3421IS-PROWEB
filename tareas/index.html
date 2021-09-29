@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        body{
+            background: burlywood;
+        }
+        .navegacion{
+            width: 1000px;
+            margin: 30px auto;
+            background: rgb(197, 225, 236);
+        }
+        .navegacion ul{
+            list-style: none;
+            
+        }
+        .tareas >li{
+            display: inline-block;
+        }
+        .tareas >li > a{
+            display: block;
+            padding: 15px 20px;
+            color: #353535;
+            font-family: 'Open sans';
+            text-decoration: none;
+        }
+        .tareas li a:hover{
+            color: #CE7D35;
+            transition: all .2s;
+        }
+        .subtarea{
+            position: absolute;
+            background: #333333;
+            width: 130%;
+            visibility: none;
+            opacity: 0;
+            transition: opacity 1.5s;
+
+        }
+        .subtarea li a{
+            display: block;
+            padding: 15px;
+            color: #fff;
+            font-family: 'open sans';
+            text-transform: none;
+        }
+        .tareas li a:hover .subtarea{
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegacion">
+            <ul class="tareas">
+                <li><a href="#"> tareas</a>
+                    <ul class="subtarea">
+                        <li><a href="#"> tareas</a></li>
+                        <li><a href="#"> tareas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#"> completado</a></li>
+                <li><a href="#"> en espera</a></li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

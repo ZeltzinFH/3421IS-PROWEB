@@ -1,0 +1,27 @@
+
+
+function agregar_producto(){
+    var producto = document.getElementById("agre_prod");
+    var precio = document.getElementById("precio_prod");
+    var cantidad = document.getElementById("cant_prod");
+
+    var datos = document.getElementById("tabla_prod");
+
+    var subtotal = Number (precio.value) * Number (cantidad.value);
+
+    datos.innerHTML = datos.innerHTML + "<tr><td>"+producto.value+"</td>"+"<td>"+precio.value+"</td>"+"<td>"+cantidad.value+"</td>"+"<td name='subtotal'>"+subtotal+"</td>"+"</tr>";
+
+    calcular_total();
+}
+function calcular_total(){
+    var subtotales = document.getElementsByName('subtotal');
+    var Total = document.getElementsByName('total');
+
+    var suma =0;
+
+    for (var i=0; i< subtotales.length; i++){
+        suma = suma + Number(subtotales[i].innerText)
+
+    }
+    total.innerText = "$" + suma;
+}
